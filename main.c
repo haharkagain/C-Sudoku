@@ -13,7 +13,7 @@ void draw();		// renders the textures into the window
 void drawThickLine(int thickness, int startX, int startY, int endX, int endY);	// draw a thicker line
 
 int eventHandler(SDL_Event e);	// handle events
-void copyBoard(int dest[9][9], int src[9][9]); 
+void copyBoard(int dest[9][9], int src[9][9]);	// copies the sudoku board from src into dest
 
 int solveSudoku(int array[9][9]);	// solve the sudoku recursively
 int findCell(int array[9][9], int* row, int* col);	// find an empty cell, return 0 if everything is full
@@ -28,10 +28,10 @@ SDL_Renderer* renderer = NULL;	// renderer
 SDL_Texture* numbers[10];		// array of textures for each number
 
 const int SCREEN_WIDTH = 720, SCREEN_HEIGHT = SCREEN_WIDTH;	// screen resolution
-int unit = SCREEN_WIDTH / 9;
-int posX = 0, posY = 0;
+int unit = SCREEN_WIDTH / 9;	// unit used for drawing
+int posX = 0, posY = 0;			// position of selector
 
-enum DrawMode {
+enum DrawMode {		// enum for drawing while solving
 	DrawMode_OFF,
 	DrawMode_ONCE,
 	DrawMode_ON
@@ -64,7 +64,7 @@ void WinMain(int arg, char *argv[]) {
 		}
 		if (drawMode) {		// drawing while solving
 			draw();
-			if (drawMode == DrawMode_ONCE) {	// draw after finished
+			if (drawMode == DrawMode_ONCE) {	// draw after finished solving
 				drawMode = DrawMode_OFF;
 				draw();
 			}
