@@ -8,10 +8,11 @@ to run:
   3) run start.bat
   4) enjoy
 
-use the arrow keys to move the position of the highlighted square.
-to set a number at the position of the yellow square, enter a number 1-9. 
-to clear a square, press '0' at the position.
-if you want the sudoku to be solved, press 'enter' for the recursive algorithm to begin.
+'arrowkeys' to move
+'1-9' to set a number at the selected position
+'0' or 'backspace' to clear the number at the selected position
+'enter' to start the solver
+'\' to reset
 
 its pretty barebones, but it works twice as fast as my javascript version, despite the identical algorithms. 
 prolly because c is closer to machine code. brendan eich is in shambles.
