@@ -12,7 +12,7 @@ to run:
 - '1-9' to set a number at the selected position
 - '0' or 'backspace' to clear the number at the selected position
 - 'enter' to start the solver
-- '\' to reset
+- '\\' to reset
 
 its pretty barebones, but it works twice as fast as my javascript version, despite the identical algorithms. 
 prolly because c is closer to machine code. brendan eich is in shambles.
