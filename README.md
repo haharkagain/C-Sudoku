@@ -1,5 +1,5 @@
 # C-Sudoku
-sudoku written in c using sdl2. includes a recursive solver.
+sudoku written in C and graphics using sdl2. includes a recursive solver.
 
 to run:
   1) have a 64 bit windows system (untested on other systems, just get the proper include and library 
